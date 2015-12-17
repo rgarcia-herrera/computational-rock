@@ -3,6 +3,7 @@ mingus+mido hacking
 
 <table>
 <tr>
+<th>00</th>
 <th>01</th>
 <th>02</th>
 <th>03</th>
