@@ -12,6 +12,12 @@ from mingus.containers import Note
 #def groove(bars=1,tension=1):
 #    return groove
 
+def zero_count(string):
+    """
+    return number of zeroes in string
+    """
+    return string.count('0')
+    
 
 def transiciones(string):
     """
@@ -41,17 +47,22 @@ class Groover:
                 self.grooves[t] = [ string, ]
 
 
+
+        self.shade_grooves={}
+        for n in range(0,1024*64,1):
+            string = "{:0>16b}".format(n)
+            shade = zero_count(string)
+            if shade in self.shade_grooves:
+                self.shade_grooves[shade].append(string)
+            else:
+                self.shade_grooves[shade] = [string, ]
+
     def get_groove(self,transitions):
         return random.sample(self.grooves[transitions],1)
 
 
 
     def plot_grooves(self):
-        s = ['110010010011',
-             '101011010100',
-             '110010110101',
-             '100010010011']
-
 
         for t in self.grooves:
             s = self.grooves[t]
@@ -60,6 +71,14 @@ class Groover:
                 w = png.Writer(len(s[0]), len(s), greyscale=True, bitdepth=1)
                 w.write(f, s)
 
+        for t in self.grooves:
+            s = self.shade_grooves[t]
+            s = map(lambda x: map(int, x), s)            
+            with open('shade_%02i.png' % t, 'wb') as f:
+                w = png.Writer(len(s[0]), len(s), greyscale=True, bitdepth=1)
+                w.write(f, s)
+
+                
 
 class Agent:
 
