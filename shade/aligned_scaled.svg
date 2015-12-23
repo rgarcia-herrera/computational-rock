@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="290"
+   height="600"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="align.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.97166667"
+     inkscape:cx="145"
+     inkscape:cy="300"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1278"
+     inkscape:window-height="798"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-42.862183)">
+    <image
+       y="42.862183"
+       x="0"
+       id="image0"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_00.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="18.266666"
+       id="image1"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_01.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="36.533333"
+       id="image2"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_02.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="54.799999"
+       id="image3"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_03.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="73.066666"
+       id="image4"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_04.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="91.333328"
+       id="image5"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_05.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="109.6"
+       id="image6"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_06.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="127.86667"
+       id="image7"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_07.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="146.13333"
+       id="image8"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_08.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="164.39999"
+       id="image9"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_09.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="182.66666"
+       id="image10"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_10.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="200.93333"
+       id="image11"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_11.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="219.2"
+       id="image12"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_12.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="237.46666"
+       id="image13"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_13.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="255.73334"
+       id="image14"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_14.png"
+       width="16"
+       height="600" />
+    <image
+       y="42.862183"
+       x="274"
+       id="image15"
+       xlink:href="file:///home/rodrigo/computational-rock/shade/shade_15.png"
+       width="16"
+       height="600" />
+  </g>
+</svg>
