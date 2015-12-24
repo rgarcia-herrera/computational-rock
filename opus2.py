@@ -5,7 +5,7 @@ import random
 import mingus.core.scales as scales
 from mingus.containers import Note
 
-output = mido.open_output( u'FCA1616 MIDI 1')
+output = mido.open_output( u'ZynAddSubFX')
 
 loop = [
     [1, 0, 0, 0, 0, 0, 0, 0],
@@ -22,16 +22,81 @@ loop = [
     [1, 0, 0, 0, 1, 0, 0, 0],
     ]
 
+
+loop=[ [0,],
+       [1,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [1,],
+       [1,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [1,],
+       [1,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [0,],
+       [1,],
+       [0,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [0,],
+       [0,],
+       [0,],
+       [0,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [0,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [0,],
+       [0,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [1,],
+       [1,]]
+
 # C3 = 48
-escala = scales.HarmonicMajor('D')
+escala = scales.HarmonicMajor('C')
 escala.octaves = 1
 notas = []
 for o in range(5,8):
     for n in escala.ascending():
         notas.append(int(Note(n, o)))
 
-pprint(notas)
-bpm = 111
+bpm = 480
 delay = 60.0 / bpm
 
 try:
