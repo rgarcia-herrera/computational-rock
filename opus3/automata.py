@@ -3,6 +3,7 @@ from time import sleep
 import png
 import mido
 import random
+import itertools
 import mingus.core.scales as scales
 from mingus.containers import Note
 
@@ -44,8 +45,8 @@ class TransitionAutomata:
 
 
 
-    def get_groove(self,transitions):
-        return random.sample(self.grooves[transitions],1)
+    def get_groove(self,transitions, length):
+        return [int(n) for n in itertools.chain(*random.sample(self.grooves[transitions],length))]
 
     
 class ShadeAutomata:
@@ -93,12 +94,12 @@ def plot_grooves(grooves, prefix):
 
 
 
-ta = TransitionAutomata()
-sa = ShadeAutomata()
+# ta = TransitionAutomata()
+# sa = ShadeAutomata()
 
-#plot_grooves(ta.grooves, 'ta')
-#plot_grooves(sa.grooves, 'sa')
+# #plot_grooves(ta.grooves, 'ta')
+# #plot_grooves(sa.grooves, 'sa')
 
-for n in range(15):
-    print sa.get_groove(7)
-    print ta.get_groove(n)
+# for n in range(15):
+#     print sa.get_groove(7)
+#     print ta.get_groove(n)
