@@ -89,11 +89,6 @@ def plot_grooves(grooves, prefix):
 
                 
 
-class Agent:
-
-    def __init__(self):
-        pass
-
 
 
 
