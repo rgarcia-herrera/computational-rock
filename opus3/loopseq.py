@@ -2,8 +2,6 @@ from groove import Groove
 from time import sleep
 import mido
 import random
-import mingus.core.scales as scales
-from mingus.containers import Note
 from pprint import pprint
 
 
