@@ -1,9 +1,6 @@
 from groove import Groove
 from time import sleep
 import mido
-import random
-from pprint import pprint
-
 
 
 class Sequencer:
