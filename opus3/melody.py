@@ -34,22 +34,42 @@ def random_walk_edge_weight(graph):
         n = m
 
 
-class Melody:
+
+
+
 
     
-    def __init__(self, scale, graph, length=1, repeat=2, transitions=7, ):
-        g = Groove(length      = length,
-                   repeat      = repeat,
-                   transitions = transitions)
+
+class Melody:
+
+
+    def random_walk_interval(self, node):
+        neighbors = nx.neighbors(self.graph, node)
+        choices = []
+        for m in neighbors:
+            w = self.graph.get_edge_data(node,m)['w']
+            for i in range(w):
+                choices.append(m)
+        return random.choice(choices)
+
+    
+    def __init__(self, scale, graph, roll, length=1, repeat=2):
 
         self.graph = graph
+        self.roll  = roll
+        
         self.loop  = [ scale, ]
 
+        submelody = 8
+        note = scale[0]
+        for tine in self.roll.groove:
+            # render note
+
+            # get a new note
+            note = self.random_walk_interval( note )
+        
         
 
-        
-    def random_walk_interval(self, node):
-        pass
 # [
 #     # [48, 50, 52, 53, 55, 57, 59, 60],
 #     ai,
