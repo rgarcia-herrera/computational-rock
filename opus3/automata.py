@@ -71,8 +71,9 @@ class ShadeAutomata:
                 self.grooves[shade] = [string, ]
 
                 
-    def get_groove(self,shade):
-        return random.sample(self.grooves[shade],1)
+    def get_groove(self,shade, length):
+        return [int(n) for n in itertools.chain(*random.sample(self.grooves[shade],length))]        
+
 
 
 
