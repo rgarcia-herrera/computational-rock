@@ -14,5 +14,5 @@ class Groove:
         subgroove = ta.get_groove(transitions, length)
         epa = [subgroove for r in range(repeat)]
         groove = itertools.chain( *epa )
-        self.loop = [[int(n),] for n in groove]
+        self.loop = [int(n) for n in groove]
         
