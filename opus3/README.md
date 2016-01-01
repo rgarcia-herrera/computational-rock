@@ -21,52 +21,52 @@ mingus+mido hacking
 <th>15</th>
 </tr>
 <tr>
-<td><img src="plots/00.png" width="32px">
+<td><img src="plots/transition_automata/00.png" width="32px">
 
 </td>
-<td><img src="plots/01.png" width="32px">
+<td><img src="plots/transition_automata/01.png" width="32px">
 
 </td>
-<td><img src="plots/02.png" width="32px">
+<td><img src="plots/transition_automata/02.png" width="32px">
 
 </td>
-<td><img src="plots/03.png" width="32px">
+<td><img src="plots/transition_automata/03.png" width="32px">
 
 </td>
-<td><img src="plots/04.png" width="32px">
+<td><img src="plots/transition_automata/04.png" width="32px">
 
 </td>
-<td><img src="plots/05.png" width="32px">
+<td><img src="plots/transition_automata/05.png" width="32px">
 
 </td>
-<td><img src="plots/06.png" width="32px">
+<td><img src="plots/transition_automata/06.png" width="32px">
 
 </td>
-<td><img src="plots/07.png" width="32px">
+<td><img src="plots/transition_automata/07.png" width="32px">
 
 </td>
-<td><img src="plots/08.png" width="32px">
+<td><img src="plots/transition_automata/08.png" width="32px">
 
 </td>
-<td><img src="plots/09.png" width="32px">
+<td><img src="plots/transition_automata/09.png" width="32px">
 
 </td>
-<td><img src="plots/10.png" width="32px">
+<td><img src="plots/transition_automata/10.png" width="32px">
 
 </td>
-<td><img src="plots/11.png" width="32px">
+<td><img src="plots/transition_automata/11.png" width="32px">
 
 </td>
-<td><img src="plots/12.png" width="32px">
+<td><img src="plots/transition_automata/12.png" width="32px">
 
 </td>
-<td><img src="plots/13.png" width="32px">
+<td><img src="plots/transition_automata/13.png" width="32px">
 
 </td>
-<td><img src="plots/14.png" width="32px">
+<td><img src="plots/transition_automata/14.png" width="32px">
 
 </td>
-<td><img src="plots/15.png" width="32px">
+<td><img src="plots/transition_automata/15.png" width="32px">
 
 </td>
 </tr>
