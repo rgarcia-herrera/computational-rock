@@ -18,52 +18,52 @@
 <th>15</th>
 </tr>
 <tr>
-<td><img src="00.png" width="32px">
+<td><img src="shade_00.png" width="32px">
 
 </td>
-<td><img src="01.png" width="32px">
+<td><img src="shade_01.png" width="32px">
 
 </td>
-<td><img src="02.png" width="32px">
+<td><img src="shade_02.png" width="32px">
 
 </td>
-<td><img src="03.png" width="32px">
+<td><img src="shade_03.png" width="32px">
 
 </td>
-<td><img src="04.png" width="32px">
+<td><img src="shade_04.png" width="32px">
 
 </td>
-<td><img src="05.png" width="32px">
+<td><img src="shade_05.png" width="32px">
 
 </td>
-<td><img src="06.png" width="32px">
+<td><img src="shade_06.png" width="32px">
 
 </td>
-<td><img src="07.png" width="32px">
+<td><img src="shade_07.png" width="32px">
 
 </td>
-<td><img src="08.png" width="32px">
+<td><img src="shade_08.png" width="32px">
 
 </td>
-<td><img src="09.png" width="32px">
+<td><img src="shade_09.png" width="32px">
 
 </td>
-<td><img src="10.png" width="32px">
+<td><img src="shade_10.png" width="32px">
 
 </td>
-<td><img src="11.png" width="32px">
+<td><img src="shade_11.png" width="32px">
 
 </td>
-<td><img src="12.png" width="32px">
+<td><img src="shade_12.png" width="32px">
 
 </td>
-<td><img src="13.png" width="32px">
+<td><img src="shade_13.png" width="32px">
 
 </td>
-<td><img src="14.png" width="32px">
+<td><img src="shade_14.png" width="32px">
 
 </td>
-<td><img src="15.png" width="32px">
+<td><img src="shade_15.png" width="32px">
 
 </td>
 </tr>
