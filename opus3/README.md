@@ -37,7 +37,9 @@ counting transitions from 0 to 1 or from 1 to 0. For example:
 1111111100000000 and 0000000011111111 have one, 1100110011001100 has
 seven and 0101010101010101 has fifteen.
 
-Plots for each complete group can be seen [here](plots/transition_automata/).
+Plots are done by painting black pixels for zeroes and white pixels
+for ones. Each complete group can be seen plotted
+[here](plots/transition_automata/).
 
 They look great, check out the symmetry!
 <img src="plots/transition_automata/transitions_2_1.png">
@@ -51,6 +53,8 @@ If zeroes are painted black, numbers with more zeroes are shadier. All
 numbers in the sixteen bit series are classified by shade. For example
 0000000000000000 is in group sixteen while 0000000011111111 and
 0000111100001111 are in group eight.
+
+<img src="plots/shade/aligned_scaled.png">
 
 Plots for each complete group can be seen [here](plots/shade/).
 
