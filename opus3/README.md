@@ -1,73 +1,56 @@
-# computational-rock
-mingus+mido hacking
+# Computational Rock: Opus 3
 
-<table>
-<tr>
-<th>00</th>
-<th>01</th>
-<th>02</th>
-<th>03</th>
-<th>04</th>
-<th>05</th>
-<th>06</th>
-<th>07</th>
-<th>08</th>
-<th>09</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>14</th>
-<th>15</th>
-</tr>
-<tr>
-<td><img src="plots/transition_automata/00.png" width="32px">
+[Cellular automata](automata.py) create [rythm patterns](groove.py).
+[Melodies](melody.py) are created random-walking a complex network
+created with the grades from a given scale as nodes.
 
-</td>
-<td><img src="plots/transition_automata/01.png" width="32px">
+## Binary Count Cellular Automata
 
-</td>
-<td><img src="plots/transition_automata/02.png" width="32px">
+Binary count from 0000 to 1111 would go like:
 
-</td>
-<td><img src="plots/transition_automata/03.png" width="32px">
+| base 10 | base 2 |
+-------|-------|
+| 0 | 0000 |
+| 1 | 0001 |
+| 2 | 0010 |
+| 3 | 0011 |
+| 4 | 0100 |
+| 5 | 0101 |
+| 6 | 0110 |
+| 7 | 0111 |
+| 8 | 1000 |
+| 9 | 1001 |
+|10 | 1010 |
+| etc. | etc. |
 
-</td>
-<td><img src="plots/transition_automata/04.png" width="32px">
+For a time resolution of a sixteenth of a whole note sixteen bits can
+be used: from 0000000000000000 to 1111111111111111, which is 65,536 in
+base 10 (1024*64).
 
-</td>
-<td><img src="plots/transition_automata/05.png" width="32px">
 
-</td>
-<td><img src="plots/transition_automata/06.png" width="32px">
 
-</td>
-<td><img src="plots/transition_automata/07.png" width="32px">
+### Grouping by number of Transitions
 
-</td>
-<td><img src="plots/transition_automata/08.png" width="32px">
+All numbers in the sixteen bit series are classified and grouped by
+counting transitions from 0 to 1 or from 1 to 0. For example:
+1111111111111111 and 0000000000000000 have zero transitions while
+1111111100000000 and 0000000011111111 have one, 1100110011001100 has
+seven and 0101010101010101 has fifteen.
 
-</td>
-<td><img src="plots/transition_automata/09.png" width="32px">
+Plots for each complete group can be seen [here](plots/transition_automata/).
 
-</td>
-<td><img src="plots/transition_automata/10.png" width="32px">
+They look great, check out the symmetry!
+<img src="plots/transition_automata/transitions_2_1.png">
+<img src="plots/transition_automata/transitions_condor.png">
+<img src="plots/transition_automata/transitions_ciudad.png">
 
-</td>
-<td><img src="plots/transition_automata/11.png" width="32px">
 
-</td>
-<td><img src="plots/transition_automata/12.png" width="32px">
+### Grouping by shade
 
-</td>
-<td><img src="plots/transition_automata/13.png" width="32px">
+If zeroes are painted black, numbers with more zeroes are shadier. All
+numbers in the sixteen bit series are classified by shade. For example
+0000000000000000 is in group sixteen while 0000000011111111 and
+0000111100001111 are in group eight.
 
-</td>
-<td><img src="plots/transition_automata/14.png" width="32px">
+Plots for each complete group can be seen [here](plots/shade/).
 
-</td>
-<td><img src="plots/transition_automata/15.png" width="32px">
-
-</td>
-</tr>
-</table>
