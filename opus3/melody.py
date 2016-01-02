@@ -4,6 +4,7 @@ from automata import TransitionAutomata, ShadeAutomata
 import itertools
 from groove import Roll
 import networkx as nx
+import matplotlib.pyplot as plt
 import random
 from pprint import pprint
 
@@ -87,27 +88,12 @@ class Melody:
                 if self.roll.groove[i] == 1 and self.roll.groove[i+1] == 0:
                     note = self.random_walk_interval( note )
         
+
+    def plot_graph(self):
+        nx.draw(self.graph)
+        plt.savefig("plots/intervals_graph.png")
         
 
-# [
-#     # [48, 50, 52, 53, 55, 57, 59, 60],
-#     ai,
-#     ([0, 0, 0, 0, 0, 0, 0, 1],  [1,1,1,1,1,1,1,1]),
-#     ([0, 0, 0, 0, 0, 0, 1, 0],  [1,1,1,1,1,1,1,1]),
-    
-#     ([1, 0, 0, 0, 0, 0, 0, 0],  [0,1,1,1,1,1,1,1]),
-#     ([1, 0, 0, 0, 0, 0, 0, 0],  [0,1,1,1,1,1,1,1]),
-#     ([1, 0, 0, 0, 0, 0, 0, 0],  [0,1,1,1,1,1,1,1]),
-#     ([1, 0, 0, 0, 1, 0, 0, 0],  [1,1,1,1,1,1,1,1]),
-#     ([1, 0, 0, 0, 0, 1, 0, 0],  [1,1,1,1,1,1,1,1]),
-#     ([1, 0, 0, 0, 0, 0, 1, 0],  [0,1,1,1,1,1,1,1]),
-#     ([1, 0, 0, 1, 0, 0, 0, 0],  [0,1,1,1,1,1,1,1]),
-#     ([1, 0, 0, 1, 0, 0, 0, 0],  [0,1,1,1,1,1,1,1]),
-#     ]
-        
-
-
-# scales.ionian("C")
 
 
 # a specific interval might be e.g. c3-e4, repetition of it makes the
