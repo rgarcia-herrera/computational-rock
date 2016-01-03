@@ -64,13 +64,16 @@ Plots for each complete group can be seen [here](plots/shade/).
 
 ## Melody generator
 
-Melodies are created random walking random networks of different topologies.
+Melodies are created random walking random networks of different
+topologies. Nodes are notes in the scale, edges become intervals.
+Melodies always start on the selected tonic. Edges are weighted by a
+random walker on initialization.
 
-Barabasi-Albert
+#### Barabasi-Albert
 <img src="plots/intervals_barabasi_albert_graph.png">
 
-Erds-Renyi
+#### Erdos-Renyi
 <img src="plots/intervals_erdos_renyi_graph.png">
 
-Strogatz
+#### Strogatz
 <img src="plots/intervals_strogatz_graph.png">
