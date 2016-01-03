@@ -58,3 +58,19 @@ numbers in the sixteen bit series are classified by shade. For example
 
 Plots for each complete group can be seen [here](plots/shade/).
 
+
+
+
+
+## Melody generator
+
+Melodies are created random walking random networks of different topologies.
+
+Barabasi-Albert
+<img src="plots/intervals_barabasi_albert_graph.png">
+
+Erds-Renyi
+<img src="intervals_erdos_renyi_graph.png">
+
+Strogatz
+<img src="intervals_strogatz_graph.png">

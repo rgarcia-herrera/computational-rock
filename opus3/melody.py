@@ -1,4 +1,5 @@
 import mingus.core.scales as scales
+import mingus.core.notes as notes
 from mingus.containers import Note
 from automata import TransitionAutomata, ShadeAutomata
 import itertools
@@ -7,7 +8,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import random
 from pprint import pprint
-
+from midi_ints import midi2note
 
 def scale2ints(minguscale, key='C', span=2, octave=3):
     scale = minguscale(key, span)
@@ -60,7 +61,7 @@ class Melody:
 
         self.graph = graph
         self.roll  = roll
-        
+        self.scale = scale
         self.loop  = [ scale, ]
 
         submelody = 8
@@ -90,7 +91,42 @@ class Melody:
         
 
     def plot_graph(self):
-        nx.draw(self.graph)
+        pos=nx.spring_layout(self.graph, weight='w')
+
+        nx.draw_networkx_nodes(self.graph, pos,
+                               node_color='r',
+                               node_size=500,
+                               alpha=0.8)
+
+
+        # group edges by their weight
+        edgelists = {}
+        for e in self.graph.edges():
+            w = self.graph.get_edge_data(*e)['w']
+            if w in edgelists:
+                edgelists[w].append(e)
+            else:
+                edgelists[w] = [e,]
+
+        # plot edges
+        width=1
+        for w in edgelists:
+            nx.draw_networkx_edges(self.graph,pos,
+                                   edgelist=edgelists[w],
+                                   width=width,
+                                   alpha=0.5,
+                                   edge_color='b')
+            width+=1
+
+        labels={}
+        for n in self.graph.nodes():
+            labels[n]=midi2note[self.scale[n]]
+
+        nx.draw_networkx_labels(self.graph,pos,labels,font_size=8)
+
+
+        plt.axis('off')
+        # nx.draw(self.graph)
         plt.savefig("plots/intervals_graph.png")
         
 
