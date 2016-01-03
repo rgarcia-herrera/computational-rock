@@ -70,7 +70,7 @@ Barabasi-Albert
 <img src="plots/intervals_barabasi_albert_graph.png">
 
 Erds-Renyi
-<img src="intervals_erdos_renyi_graph.png">
+<img src="plots/intervals_erdos_renyi_graph.png">
 
 Strogatz
-<img src="intervals_strogatz_graph.png">
+<img src="plots/intervals_strogatz_graph.png">
