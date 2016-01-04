@@ -52,13 +52,18 @@ class Melody:
 
     def random_walk_interval(self, node):
         neighbors = nx.neighbors(self.graph, node)
-        choices = []
-        for m in neighbors:
-            w = self.graph.get_edge_data(node,m)['w']
-            for i in range(w):
-                choices.append(m)
-                if random.choice([True, False]):
-                    choices.append(node)
+
+        if neighbors:
+            # create array of choices proportional to edge weights
+            choices = []
+            for m in neighbors:
+                w = self.graph.get_edge_data(node,m)['w']
+                for i in range(w):
+                    choices.append(m)
+                    if random.choice([True, False]):
+                        choices.append(node)
+        else:
+            choices = random.sample(self.graph.nodes(),1)
         return random.choice(choices)
 
     
