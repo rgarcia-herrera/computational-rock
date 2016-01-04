@@ -21,18 +21,23 @@ def scale2ints(minguscale, key='C', span=2, octave=3):
 
 
 def random_walk_edge_weight(graph):
-    n = None
-    for i in range(len(graph.edges())*100):
-        if n == None:
-            n = random.choice(graph.nodes())
+    n = random.choice(graph.nodes())
 
-        m = random.choice( nx.neighbors(graph, n) )
+    # init weights at 1
+    for e in graph.edges():
+        graph.add_edge(*e,w=1)
+
+    # jump around hundreds of times
+    for i in range(len(graph.edges())*100):
+        neighbors = nx.neighbors(graph,n)
         
-        if 'w' in graph.get_edge_data(n,m):
-            w = graph.get_edge_data(n,m)['w'] + 1
-        else:
-            w = 1
-        graph.add_edge(n,m,w=w)
+        if neighbors:
+            m = random.choice( neighbors )
+        
+        w = graph.get_edge_data(n,m)['w']
+
+        graph.add_edge(n,m,w=w+1)
+        
         n = m
 
 
