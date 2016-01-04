@@ -3,48 +3,64 @@ import mido
 
 
 class Sequencer:
-    def __init__(self, output, bpm, loop):
+    def __init__(self, output, bpm, roll, loop=True):
         self.delay  = 60.0 / (bpm * 4)
-        self.loop   = loop
+        self.roll   = roll
         self.output = output
+        self.bar    = 0
+        self.t      = 1
+        self.loop   = loop
 
 
-    def play(self):
-        try:
-            t = 1
-            while True:
-                
-                for i in range(0,len(self.loop[0])):
-                    now = t
-                    if t == 1:
-                        prev = len(self.loop) - 1
-                    else:
-                        prev = t - 1
+
+    def play_tine(self):
+        for i in range(0,len(self.roll[0])):
+            now = self.t
+            if self.t == 1:
+                prev = len(self.roll) - 1
+            else:
+                prev = self.t - 1
                         
-                    # play on 0 to 1
-                    if self.loop[prev][0][i] == 0 and self.loop[now][0][i] == 1:
-                        self.output.send(mido.Message('note_on',  note=self.loop[0][i], velocity=64))
-                    # silence on 1 to 0                        
-                    elif self.loop[prev][0][i] == 1 and self.loop[now][0][i] == 0:
-                        self.output.send(mido.Message('note_off', note=self.loop[0][i], velocity=64))
-                    # 1 to 1?
-                    elif self.loop[prev][0][i] == 1 and self.loop[now][0][i] == 1:
-                        # silence and play if staccato part == 0
-                        if self.loop[prev][1][i] == 0:
-                            self.output.send(mido.Message('note_off', note=self.loop[0][i], velocity=64))
-                            self.output.send(mido.Message('note_on',  note=self.loop[0][i], velocity=64))                            
+            # play on 0 to 1
+            if (self.roll[prev][0][i] == 0 and self.roll[now][0][i] == 1) or (self.roll[now][0][i] == 1 and self.bar == 0):
+                self.output.send(mido.Message('note_on',  note=self.roll[0][i], velocity=64))
+            # silence on 1 to 0                        
+            elif self.roll[prev][0][i] == 1 and self.roll[now][0][i] == 0:
+                self.output.send(mido.Message('note_off', note=self.roll[0][i], velocity=64))
+            # 1 to 1?
+            elif self.roll[prev][0][i] == 1 and self.roll[now][0][i] == 1:
+                # silence and play if staccato part == 0
+                if self.roll[prev][1][i] == 0:
+                    self.output.send(mido.Message('note_off', note=self.roll[0][i], velocity=64))
+                    self.output.send(mido.Message('note_on',  note=self.roll[0][i], velocity=64))                            
+    
 
-                print self.loop[t]
 
-                # as time goes by
-                t+=1
-                if t == len(self.loop):
-                    t = 1
-                sleep(self.delay)
+    def time_delta(self):
+        # as time goes by
+        print self.roll[self.t] 
+        self.bar += 1                
+        self.t   += 1
+        if self.t == len(self.roll):
+            self.t = 1
+        sleep(self.delay)
         
 
-        except KeyboardInterrupt:
-            for i in range(0,len(self.loop[0])):
-                self.output.send(mido.Message('note_off', note=self.loop[0][i], velocity=64))
-            self.output.close()
-
+    def mute(self):
+        for i in range(0,len(self.roll[0])):
+            self.output.send(mido.Message('note_off', note=self.roll[0][i], velocity=64))
+        self.output.close()
+        
+        
+    def play(self):
+        if self.loop == True:
+            try:
+                while True:
+                    self.play_tine()
+                    self.time_delta()
+            except KeyboardInterrupt:
+                self.mute()
+        else:
+            for n in range(len(self.roll)-1):
+                self.play_tine()
+                self.time_delta()                
