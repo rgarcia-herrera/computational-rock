@@ -10,7 +10,7 @@ from melody import Melody, scale2ints, random_walk_edge_weight
 from itertools import combinations
 
 # configure scale as list of ints: midi notes
-scale = scale2ints(scales.Major, 'A', span=1, octave=2)
+scale = scale2ints(scales.Major, 'C', span=2, octave=3)
 
 
 # prepare network of intervals
@@ -23,9 +23,9 @@ random_walk_edge_weight(g)
 
 # create roll object
 roll = Roll(length      = 1,
-            repeat      = 4,
-            transitions = 9,
-            shade       = 2)
+            repeat      = 2,
+            transitions = 13,
+            shade       = 1)
 
 # bring it all together
 m = Melody(scale=scale,
@@ -33,6 +33,8 @@ m = Melody(scale=scale,
            length=1,
            repeat=2,
            roll=roll)
+
+m.plot_graph()
 
 print m.loop[0]
 # loop = Melody.loop
