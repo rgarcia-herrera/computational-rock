@@ -33,12 +33,11 @@ def random_walk_edge_weight(graph):
         
         if neighbors:
             m = random.choice( neighbors )
-        
-        w = graph.get_edge_data(n,m)['w']
-
-        graph.add_edge(n,m,w=w+1)
-        
-        n = m
+            w = graph.get_edge_data(n,m)['w']
+            graph.add_edge(n,m,w=w+1)
+            n = m
+        else:
+            n = random.sample( graph.nodes(), 1 )
 
 
 
