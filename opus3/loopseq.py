@@ -3,7 +3,7 @@ import mido
 
 
 class Sequencer:
-    def __init__(self, output, bpm, roll, loop=True):
+    def __init__(self, output, bpm, roll, loop=0):
         self.delay  = 60.0 / (bpm * 4)
         self.roll   = roll
         self.output = output
@@ -49,18 +49,20 @@ class Sequencer:
     def mute(self):
         for i in range(0,len(self.roll[0])):
             self.output.send(mido.Message('note_off', note=self.roll[0][i], velocity=64))
-        self.output.close()
+
         
         
     def play(self):
-        if self.loop == True:
-            try:
+        self.playing = True
+        try:
+            if self.loop == 0:
                 while True:
                     self.play_tine()
                     self.time_delta()
-            except KeyboardInterrupt:
-                self.mute()
-        else:
-            for n in range(len(self.roll)-1):
-                self.play_tine()
-                self.time_delta()                
+            else:
+                for l in range(self.loop):
+                    for n in range(len(self.roll)-1):
+                        self.play_tine()
+                        self.time_delta()                
+        except KeyboardInterrupt:
+            self.mute()
