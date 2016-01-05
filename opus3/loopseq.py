@@ -63,6 +63,8 @@ class Sequencer:
                 for l in range(self.loop):
                     for n in range(len(self.roll)-1):
                         self.play_tine()
-                        self.time_delta()                
+                        self.time_delta()
+                self.mute()
         except KeyboardInterrupt:
             self.mute()
+            exit(0)
