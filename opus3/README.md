@@ -1,6 +1,6 @@
 # Computational Rock: Opus 3
 
-[Cellular automata](automata.py) create [rythm patterns](groove.py).
+[Cellular automata](automata.py) create [rythm patterns](opus3.py).
 [Melodies](melody.py) are created random-walking a complex network
 created with the grades from a given scale as nodes.
 
